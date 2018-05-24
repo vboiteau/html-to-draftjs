@@ -2,6 +2,9 @@
   "name": "html-to-draftjs",
   "version": "1.4.0",
   "main": "dist/html-to-draftjs.js",
+  "files": [
+    "dist/html-to-draftjs.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jpuri/html-to-draftjs.git"
@@ -28,12 +31,17 @@
     "draft-js": "^0.10.x",
     "immutable": "3.x.x || 4.x.x"
   },
+  "publishConfig": {
+    "registry": "https://ci.decksign.com/nexus/repository/decksign-npm-hosted/"
+  },
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
-    "build": "npm run clean && webpack --config config/webpack.config.js"
+    "build": "npm run clean && webpack --config config/webpack.config.js",
+    "prepublish": "npm run build",
+    "watch": "npm run build -- --watch"
   },
   "author": "Jyoti Puri",
   "license": "MIT"
