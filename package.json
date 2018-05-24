@@ -1,6 +1,6 @@
 {
   "name": "html-to-draftjs",
-  "version": "1.4.0",
+  "version": "1.4.1-0",
   "main": "dist/html-to-draftjs.js",
   "files": [
     "dist/html-to-draftjs.js"
